@@ -3,7 +3,7 @@
 A full-stack, interview-ready task management application inspired by Trello/Asana. 
 Built with Spring Boot 3+ (Java 17) and React (Vite + Tailwind CSS).
 
-## 🚀 Features
+## Features
 
 - **Authentication**: JWT-based secure signup & login with BCrypt hashing.
 - **Projects**: Create projects (Creator is auto-assigned `ADMIN` role).
@@ -13,7 +13,7 @@ Built with Spring Boot 3+ (Java 17) and React (Vite + Tailwind CSS).
 - **Dashboard**: High-level statistics on tasks and projects.
 - **Role-Based Access Control**: Admins have full access to their projects; Members can only modify their assigned tasks.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 - **Java 17+**
@@ -32,7 +32,7 @@ Built with Spring Boot 3+ (Java 17) and React (Vite + Tailwind CSS).
 
 ---
 
-## 🏃‍♂️ How to Run Locally
+## How to Run Locally
 
 ### Prerequisites
 - JDK 17+
@@ -68,32 +68,8 @@ npm run dev
 
 ---
 
-## ☁️ Railway Deployment Steps
 
-This application is ready to be deployed on Railway.
-
-### Backend Deployment (Railway)
-1. In Railway, provision a **MySQL** database.
-2. Create a new service and link it to your GitHub repository (specifically pointing to the `backend/` folder).
-3. Under the Service Settings > Variables, add the following standard Railway variables (or rely on Railway's auto-injected ones):
-   - `DB_HOST`
-   - `DB_PORT`
-   - `DB_NAME`
-   - `DB_USER`
-   - `DB_PASSWORD`
-   - `PORT` (e.g., `8080`)
-   - `JWT_SECRET` (generate a random 64-character hex string)
-4. Railway will automatically detect Maven and build the application.
-
-### Frontend Deployment (Railway)
-1. Create a new service from the same GitHub repo, pointing to the `frontend/` folder.
-2. Under Variables, add:
-   - `VITE_API_URL`: The public URL of your deployed backend (e.g., `https://my-backend.up.railway.app`).
-3. Railway will build it using `npm run build`.
-
----
-
-## 🔐 Role-Based Access Control (RBAC)
+## Role-Based Access Control (RBAC)
 
 - **ADMIN**:
   - Automatically assigned to the user who creates a project.
@@ -108,7 +84,7 @@ This application is ready to be deployed on Railway.
 
 ---
 
-## 📡 API Endpoints Summary
+## API Endpoints Summary
 
 ### Auth
 - `POST /api/auth/signup` - Register a new user
